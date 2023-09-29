@@ -46,7 +46,7 @@ const Item = ({ item, width }) => {
       <Box
         display={isHovered ? "block" : "none"}
         position={"absolute"}
-        bottom={"10%"}
+        bottom={"20%"}
         left="0"
         width="100%"
         padding="0 5%"
@@ -67,15 +67,15 @@ const Item = ({ item, width }) => {
               <AddIcon />
             </IconButton>
             {/* Button  */}
-            <Button
-              onClick={() => {
-                dispatch(addToCart({ item: { ...item, count } }));
-              }}
-              sx={{ backgroundColor: shades.primary[300], color: "white" }}
-            >
-              Add To Cart
-            </Button>
           </Box>
+          <Button
+            onClick={() => {
+              dispatch(addToCart({ item: { ...item, count } }));
+            }}
+            sx={{ backgroundColor: shades.primary[300], color: "white" }}
+          >
+            Add To Cart
+          </Button>
         </Box>
       </Box>
       <Box mt={"3px"}>
