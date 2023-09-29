@@ -13,7 +13,7 @@ import { shades } from "../../theme";
 const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart)
+  const cart = useSelector((state) => state.cart.cart)
   return (
     <Box
       display="flex"
@@ -53,7 +53,7 @@ const Navbar = () => {
           <IconButton sx={{color: 'black'}}>
             <PersonOutline />
           </IconButton>
-         {cart && <Badge
+          <Badge
             badgeContent={cart.length}
             color='secondary'
             invisible={cart.length === 0}
@@ -73,7 +73,7 @@ const Navbar = () => {
           >
             <ShoppingBagOutlined />
           </IconButton>
-          </Badge>}
+          </Badge>
           <IconButton sx={{color: 'black'}}>
             <MenuOutlined />
           </IconButton>

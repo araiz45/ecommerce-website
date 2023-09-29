@@ -22,7 +22,7 @@ export const shades = {
     700: "#800011",
     800: "#56000b",
     900: "#2b0006"
-},
+  },
   neutral: {
     100: "#f5f5f5",
     200: "#ecebeb",
@@ -43,10 +43,10 @@ export const theme = createTheme({
     primary: {
       main: shades.primary[500],
     },
-    secondary:{
+    secondary: {
       main: shades.secondary[500],
     },
-    neutral:{
+    neutral: {
       dark: shades.neutral[500],
       main: shades.neutral[500],
       light: shades.neutral[100]

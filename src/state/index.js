@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const intialState = {
+const initialState = {
   isCartOpen: false,
   cart: [],
   items: [],
@@ -8,7 +8,7 @@ const intialState = {
 
 export const cartSlice = createSlice({
   name: "cart",
-  intialState,
+  initialState,
   reducers: {
     setItems: (state, action) => {
       state.items = action.payload
@@ -50,4 +50,4 @@ export const {
   setIsCartOpen
 } = cartSlice.actions;
 
-export default cartSlice;
+export default cartSlice.reducer;

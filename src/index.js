@@ -11,16 +11,16 @@ import cartReducer from './state';
 
 
 const store = configureStore({
-  reducer: {cart: cartReducer},
+  reducer: { cart: cartReducer },
 })
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-    <ThemeProvider theme={theme} >
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
+      <ThemeProvider theme={theme} >
+        <CssBaseline />
+        <App />
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>
 );
