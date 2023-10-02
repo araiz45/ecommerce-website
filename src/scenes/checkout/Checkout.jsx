@@ -257,7 +257,7 @@ const Checkout = () => {
   async function makePayment(values) {
     const stripe = await stripePromise;
     const requestBody = {
-      userName: values.billingAddress.firstName,
+      userName: values.firstName,
       email: values.email,
       products: cart.map(({ id, count }) => ({
         id,
@@ -265,7 +265,7 @@ const Checkout = () => {
       })),
     };
     console.log(stripe);
-    const response = await fetch("http://localhost:3000/api/orders", {
+    const response = await fetch("http://localhost:1337/api/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestBody),
@@ -352,7 +352,6 @@ const Checkout = () => {
                     borderRadius: 0,
                     padding: "15px 40px",
                   }}
-                  onClick={makePayment}
                 >
                   {!isSecondStep ? "Next" : "Place Order"}
                 </Button>
